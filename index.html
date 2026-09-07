@@ -5,6 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nick Wolf · Senior Software Engineer</title>
   <meta name="description" content="Nick Wolf is a senior software engineer in Louisville, KY. Full-stack, cloud infrastructure, and real-time systems, with a decade in healthcare SaaS. Builder of ScratchWolf and principal at Wolf Digitable." />
+  <link rel="canonical" href="https://nickjwolf.com/" />
+
+  <!-- Open Graph. A recruiter most often meets this link inside LinkedIn or a message thread, and
+       preview bots do not run JavaScript — without static tags it rendered as a bare URL. -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="Nick Wolf" />
+  <meta property="og:title" content="Nick Wolf · Senior Software Engineer" />
+  <meta property="og:description" content="10+ years in HIPAA-regulated healthcare SaaS. Full-stack, AWS cloud infrastructure and real-time systems. Louisville, KY · remote." />
+  <meta property="og:url" content="https://nickjwolf.com/" />
+  <meta property="og:image" content="https://nickjwolf.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nick Wolf · Senior Software Engineer" />
+  <meta name="twitter:image" content="https://nickjwolf.com/assets/og-image.png" />
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Person schema. Every claim below already appears on the page or in the resume this was built
+       from. sameAs carries REAL profiles, which is what makes it a usable entity signal. -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person",
+   "name":"Nick Wolf","alternateName":"Nicolas J. Wolf",
+   "url":"https://nickjwolf.com/",
+   "image":"https://nickjwolf.com/assets/og-image.png",
+   "jobTitle":"Senior Software Engineer",
+   "email":"hello@nickjwolf.com",
+   "address":{"@type":"PostalAddress","addressLocality":"Louisville","addressRegion":"KY","addressCountry":"US"},
+   "knowsAbout":["Healthcare SaaS","HIPAA","Revenue cycle management","SQL Server","Snowflake","AWS",
+                 "Terraform","Micro-frontends","Module Federation","Multi-tenant architecture",
+                 "React","Node.js","C#/.NET","Java","TypeScript","Real-time systems","WebSockets"],
+   "sameAs":["https://www.linkedin.com/in/nick-wolf","https://github.com/Njwolf02",
+             "https://wolfdigitable.com","https://scratchwolf.com"]}
+  </script>
+
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     h1,h2 { font-family: 'Fraunces', Georgia, serif !important; }
@@ -31,6 +71,15 @@
     .links a { color: var(--ink); border: 1px solid var(--line); text-decoration: none; font-weight: 700; font-size: 14px; padding: 10px 18px; border-radius: 4px; }
     .links a:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 56px; color: var(--muted); font-size: 12.5px; }
+    .avail { display:inline-block; margin-top:14px; font-size:13px; font-weight:700; color:#065f46;
+      background:#ecfdf5; border:1px solid #a7f3d0; border-radius:99px; padding:6px 14px; }
+    .item .impact { color: var(--ink); font-size: 14px; margin-top: 6px; }
+    .item .impact b { font-weight: 700; }
+    .skills { font-size: 14px; color: var(--muted); }
+    .skills div { padding: 7px 0; border-bottom: 1px solid var(--line); }
+    .skills div:last-child { border-bottom: none; }
+    .skills b { color: var(--ink); font-weight: 700; display: inline-block; min-width: 148px; }
+    @media (max-width: 560px) { .skills b { display: block; min-width: 0; margin-bottom: 2px; } }
   </style>
 </head>
 <body>
@@ -38,10 +87,14 @@
     <svg style="width:40px;height:40px" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 5 L18 14 H30 L42 5 L44 22 L24 45 L4 22 Z" fill="#111827"/><path d="M16 21 l7 3.2 -7 3.2 z" fill="#059669"/><path d="M32 21 l-7 3.2 7 3.2 z" fill="#059669"/></svg>
     <h1>Nick Wolf</h1>
     <div class="role">Senior Software Engineer · Louisville, KY</div>
+    <!-- ⚠️ REMOVE THIS ONE LINE if you would rather not signal availability publicly while employed.
+         It mirrors what your Indeed resume already says, but a public site is more visible. -->
+    <div class="avail">Open to senior &amp; staff engineering roles · fully remote</div>
 
     <div class="bio">
       <p>I build systems that scale. Most of my decade in healthcare tech has gone into full-stack platforms and the data infrastructure underneath them. I've managed a fleet of 200+ production SQL Server instances and stabilized real-time messaging under production load. More recently I helped modernize an enterprise analytics stack used by hundreds of healthcare organizations.</p>
-      <p>These days I work across React, Node, and C#/.NET on AWS. I lean hard on AI-assisted engineering to ship complex products fast. The latest is a consumer data platform I built solo, end to end.</p>
+      <p>Six years of that was at Waystar, first running the production SQL Server fleet behind its claims and billing data, then modernising its analytics platform onto Snowflake and Looker. Today I'm the senior engineer on a real-time patient communication platform used by enterprise health systems including Atrium Health, AdventHealth, Stanford Medicine Children's and CommonSpirit.</p>
+      <p>I work across React, Node, and C#/.NET on AWS, and I set technical direction for my platform while still writing code every day. I lean hard on AI-assisted engineering to ship complex products fast &mdash; the clearest proof of that is ScratchWolf below, which I built and operate solo, end to end.</p>
     </div>
 
     <div class="facts">
@@ -53,7 +106,13 @@
     <h2>SELECTED WORK</h2>
     <div class="item">
       <a class="t" href="https://scratchwolf.com">ScratchWolf</a>
-      <p>Lottery-analytics platform. A 44-state automated data pipeline, a .NET API, and a React Native app, all designed and operated by me. Live prize counts, recounted every morning &mdash; <a href="https://scratchwolf.com/kentucky-scratch-offs/">Kentucky</a>, <a href="https://scratchwolf.com/texas-scratch-offs/">Texas</a>, <a href="https://scratchwolf.com/florida-scratch-offs/">Florida</a>.</p>
+      <p>Lottery-analytics platform, built and operated solo end to end: a 44-state scraping and
+      normalisation pipeline, a .NET API on Azure Functions, SQL Server, and a React Native app.</p>
+      <p class="impact"><b>3,400+ games across every US state that sells scratch-offs</b>, recounted
+      every morning, with a nightly model scoring each one. Live now &mdash;
+      <a href="https://scratchwolf.com/kentucky-scratch-offs/">Kentucky</a>,
+      <a href="https://scratchwolf.com/texas-scratch-offs/">Texas</a>,
+      <a href="https://scratchwolf.com/florida-scratch-offs/">Florida</a>.</p>
     </div>
     <div class="item">
       <a class="t" href="https://wolfdigitable.com">Wolf Digitable</a>
@@ -61,12 +120,30 @@
     </div>
     <div class="item">
       <span class="t" style="color:var(--ink);font-weight:800;font-size:16px;">Healthcare platform engineering</span>
-      <p>Real-time patient and provider messaging stabilization, micro-frontend cloud deployment systems, and Snowflake analytics modernization at enterprise scale.</p>
+      <p>Odeza / TeleVox &mdash; senior engineer on a real-time patient communication platform.
+      Previously six years at Waystar (ZirMed).</p>
+      <p class="impact">Re-architected front-end delivery to Module Federation micro-frontends:
+      release latency <b>~1 month &rarr; ~1 day</b>, rollback under a minute. Built the multi-tenant
+      embedded analytics platform that <b>retired legacy reporting across 11 health systems</b>.
+      Stabilised patient-to-provider live chat by closing <b>4 ordering races</b> that were tearing
+      down sessions mid-conversation. Ran a <b>200+ instance</b> production SQL Server fleet.</p>
+    </div>
+
+    <h2>SKILLS</h2>
+    <div class="skills">
+      <div><b>Languages</b>Java · C# · Python · TypeScript / JavaScript · SQL</div>
+      <div><b>Frontend</b>React · Vite · Module Federation · WebSockets · Material-UI</div>
+      <div><b>Backend</b>Node.js · ASP.NET MVC / Web API · Dropwizard · REST · OAuth / JWT</div>
+      <div><b>Cloud &amp; infra</b>AWS (S3, CloudFront, Lambda, API Gateway, DynamoDB, WAFv2, IAM) · Terraform · Docker · GitHub Actions</div>
+      <div><b>Data</b>SQL Server · Snowflake · Redshift · MySQL · DynamoDB · Redis · Looker · Power BI Embedded</div>
+      <div><b>Architecture</b>Multi-tenant isolation &amp; row-level security · event-driven &amp; serverless · high availability / DR · CI-CD security</div>
+      <div><b>Domain</b>HIPAA-regulated SaaS · revenue cycle management · claims &amp; billing data · patient engagement platforms</div>
     </div>
 
     <div class="links">
       <a href="https://www.linkedin.com/in/nick-wolf">LinkedIn</a>
       <a href="https://github.com/Njwolf02">GitHub</a>
+      <a href="https://scratchwolf.com">ScratchWolf</a>
       <a href="https://wolfdigitable.com">Consulting</a>
       <a href="mailto:hello@nickjwolf.com">Email</a>
     </div>
