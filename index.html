@@ -76,10 +76,17 @@
     .item .impact { color: var(--ink); font-size: 14px; margin-top: 6px; }
     .item .impact b { font-weight: 700; }
     .skills { font-size: 14px; color: var(--muted); }
-    .skills div { padding: 7px 0; border-bottom: 1px solid var(--line); }
+    /* GRID, not an inline-block with min-width. The first version used
+       `display:inline-block; min-width:148px` on the label, which only indents the FIRST line —
+       every wrapped line fell back to the left margin and ran under the label. Visible immediately
+       on the four longest rows. A two-column grid indents the whole cell. */
+    .skills div { display: grid; grid-template-columns: 132px 1fr; gap: 0 14px;
+      padding: 8px 0; border-bottom: 1px solid var(--line); align-items: start; }
     .skills div:last-child { border-bottom: none; }
-    .skills b { color: var(--ink); font-weight: 700; display: inline-block; min-width: 148px; }
-    @media (max-width: 560px) { .skills b { display: block; min-width: 0; margin-bottom: 2px; } }
+    .skills b { color: var(--ink); font-weight: 700; }
+    @media (max-width: 560px) {
+      .skills div { grid-template-columns: 1fr; gap: 2px; }
+    }
   </style>
 </head>
 <body>
@@ -131,13 +138,13 @@
 
     <h2>SKILLS</h2>
     <div class="skills">
-      <div><b>Languages</b>Java · C# · Python · TypeScript / JavaScript · SQL</div>
-      <div><b>Frontend</b>React · Vite · Module Federation · WebSockets · Material-UI</div>
-      <div><b>Backend</b>Node.js · ASP.NET MVC / Web API · Dropwizard · REST · OAuth / JWT</div>
-      <div><b>Cloud &amp; infra</b>AWS (S3, CloudFront, Lambda, API Gateway, DynamoDB, WAFv2, IAM) · Terraform · Docker · GitHub Actions</div>
-      <div><b>Data</b>SQL Server · Snowflake · Redshift · MySQL · DynamoDB · Redis · Looker · Power BI Embedded</div>
-      <div><b>Architecture</b>Multi-tenant isolation &amp; row-level security · event-driven &amp; serverless · high availability / DR · CI-CD security</div>
-      <div><b>Domain</b>HIPAA-regulated SaaS · revenue cycle management · claims &amp; billing data · patient engagement platforms</div>
+      <div><b>Languages</b><span>Java · C# · Python · TypeScript / JavaScript · SQL</span></div>
+      <div><b>Frontend</b><span>React · Vite · Module Federation · WebSockets · Material-UI</span></div>
+      <div><b>Backend</b><span>Node.js · ASP.NET MVC / Web API · Dropwizard · REST · OAuth / JWT</span></div>
+      <div><b>Cloud &amp; infra</b><span>AWS (S3, CloudFront, Lambda, API Gateway, DynamoDB, WAFv2, IAM) · Terraform · Docker · GitHub Actions</span></div>
+      <div><b>Data</b><span>SQL Server · Snowflake · Redshift · MySQL · DynamoDB · Redis · Looker · Power BI Embedded</span></div>
+      <div><b>Architecture</b><span>Multi-tenant isolation &amp; row-level security · event-driven &amp; serverless · high availability / DR · CI-CD security</span></div>
+      <div><b>Domain</b><span>HIPAA-regulated SaaS · revenue cycle management · claims &amp; billing data · patient engagement platforms</span></div>
     </div>
 
     <div class="links">
