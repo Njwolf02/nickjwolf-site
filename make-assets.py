@@ -11,7 +11,8 @@ installed and the mark is four flat shapes. 8x supersample + LANCZOS keeps 16px 
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
-HERE = Path(__file__).resolve().parent
+# Writes into public/, the folder the Worker serves (wrangler.jsonc assets.directory).
+HERE = Path(__file__).resolve().parent / "public"
 INK, ACCENT, PAPER = "#111827", "#059669", "#ffffff"
 SS = 8
 WOLF = [(6, 5), (18, 14), (30, 14), (42, 5), (44, 22), (24, 45), (4, 22)]
